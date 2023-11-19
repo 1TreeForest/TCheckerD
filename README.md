@@ -12,9 +12,12 @@ Run phpjoern (https://github.com/malteskoruppa/phpjoern) to generate the node fi
 ## How to use
 
 ~~~~~~{.sh}
-Run java -Xmx8G -cp "./bin:ApacheCommons/commons-cli-1.4/commons-cli-1.4.jar:ApacheCommons/commons-cli-1.4/commons-cli-1.4-sources.jar:ApacheCommons/commons-csv-1.8-bin/commons-csv-1.8/commons-csv-1.8.jar:ApacheCommons/commons-csv-1.8-bin/commons-csv-1.8/commons-csv-1.8-sources.jar:ApacheCommons/commons-lang3-3.10/commons-lang3-3.10.jar:ApacheCommons/commons-lang3-3.10/commons-lang3-3.10-sources.jar:ApacheCommons/json-20190722.jar"  tools.php.ast2cpg.Main TargetPHPApplication
+Run java -Xmx32G -cp "./bin:ApacheCommons/commons-cli-1.4/commons-cli-1.4.jar:ApacheCommons/commons-cli-1.4/commons-cli-1.4-sources.jar:ApacheCommons/commons-csv-1.8-bin/commons-csv-1.8/commons-csv-1.8.jar:ApacheCommons/commons-csv-1.8-bin/commons-csv-1.8/commons-csv-1.8-sources.jar:ApacheCommons/commons-lang3-3.10/commons-lang3-3.10.jar:ApacheCommons/commons-lang3-3.10/commons-lang3-3.10-sources.jar:ApacheCommons/json-20190722.jar"  tools.php.ast2cpg.Main TargetPHPApplication
 Note that the call graph (call_graph.csv) is also generated in the current directory.
 ~~~~~~
 
 ## Author
 Please contact chluo@cse.cuhk.edu.hk for any questions.
+
+## MISC
+javac -source 1.8 -target 1.8 -cp ./bin -d ./bin projects/extensions/joern-php/src/main/java/tools/php/ast2cpg/PHPCSVEdgeInterpreter.java
