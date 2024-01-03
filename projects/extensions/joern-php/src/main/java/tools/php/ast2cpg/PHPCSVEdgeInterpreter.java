@@ -106,7 +106,7 @@ import ast.statements.jump.GotoStatement;
 import ast.statements.jump.ReturnStatement;
 import ast.statements.jump.ThrowStatement;
 import cg.PHPCGFactory;
-import cg.PruneCG;
+//import cg.PruneCG;
 import cg.toTopLevelFile;
 import inputModules.csv.PHPCSVEdgeTypes;
 import inputModules.csv.PHPCSVNodeTypes;
@@ -126,7 +126,7 @@ public class PHPCSVEdgeInterpreter implements CSVRowInterpreter
 	public static Set<Long> collectFuncCall = new HashSet<Long>();
 	public static Set<Long> collectNew = new HashSet<Long>();
 	public static List<String> user_input = Arrays.asList(new String[] {"_GET", "_POST", "_COOKIE", "_REQUEST", "_ENV", "HTTP_ENV_VARS", "HTTP_POST_VARS", "HTTP_GET_VARS"});
-	//public static List<String> repairs = Arrays.asList(new String[] {"md5", "addslashes", "mysqli_real_escape_string", "mysql_escape_string"});
+	public static List<String> repairs = Arrays.asList(new String[] {"md5", "addslashes", "mysqli_real_escape_string", "mysql_escape_string"});
 	public static Set<Long> sources = new HashSet<Long>();
 	public static Set<Long> sqlSanitizers = new HashSet<Long>();
 	public static Set<Long> property = new HashSet<Long>();
@@ -2072,7 +2072,10 @@ public class PHPCSVEdgeInterpreter implements CSVRowInterpreter
 		switch (childnum)
 		{
 			case 0: // exception child: Identifier node
-				startNode.setExceptionIdentifier((Identifier)endNode);
+				if (endNode instanceof Identifier)
+					startNode.setExceptionIdentifier((Identifier)endNode);
+				if (endNode instanceof IdentifierList)
+					startNode.setExceptionIdentifier(((IdentifierList)endNode).getIdentifier(0));
 				break;
 			case 1: // var child: Variable node
 				startNode.setVariable((Variable)endNode);
@@ -2099,7 +2102,7 @@ public class PHPCSVEdgeInterpreter implements CSVRowInterpreter
 					startNode.addChild(endNode);
 				else {
 					startNode.setType(endNode);
-					PruneCG.param.add(startNode.getFuncId(), endNode.getNodeId());
+					//PruneCG.param.add(startNode.getFuncId(), endNode.getNodeId());
 				}
 				break;
 			case 1: // name child: StringExpression node
@@ -2224,7 +2227,8 @@ public class PHPCSVEdgeInterpreter implements CSVRowInterpreter
 
 	private int handleArray( ArrayExpression startNode, ASTNode endNode, int childnum)
 	{
-		startNode.addArrayElement((ArrayElement)endNode);
+		if (endNode instanceof ArrayElement)
+			startNode.addArrayElement((ArrayElement)endNode);
 
 		return 0;
 	}
