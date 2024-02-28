@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="projects/extensions/joern-fuzzyc/src/main/java"/>
+	<classpathentry kind="src" path="projects/extensions/joern-fuzzyc/src/test/java"/>
+	<classpathentry kind="src" path="projects/extensions/joern-php/src/main/java"/>
+	<classpathentry kind="src" path="projects/extensions/joern-php/src/test/java"/>
+	<classpathentry kind="src" path="projects/extensions/joern/src/main/java"/>
+	<classpathentry kind="src" path="projects/extensions/jpanlib/src/main/java"/>
+	<classpathentry kind="src" path="projects/extensions/jpanlib/src/test/java"/>
+	<classpathentry kind="src" path="projects/octopus/src/main/java"/>
+	<classpathentry kind="src" path="projects/plugins/dummy/src/main/java"/>
+	<classpathentry kind="src" path="projects/plugins/importer/src/main/java"/>
+	<classpathentry kind="lib" path="ApacheCommons/commons-cli-1.4/commons-cli-1.4-javadoc.jar"/>
+	<classpathentry kind="lib" path="ApacheCommons/commons-cli-1.4/commons-cli-1.4-sources.jar"/>
+	<classpathentry kind="lib" path="ApacheCommons/commons-cli-1.4/commons-cli-1.4-test-sources.jar"/>
+	<classpathentry kind="lib" path="ApacheCommons/commons-cli-1.4/commons-cli-1.4-tests.jar"/>
+	<classpathentry kind="lib" path="ApacheCommons/commons-cli-1.4/commons-cli-1.4.jar"/>
+	<classpathentry kind="lib" path="ApacheCommons/commons-csv-1.8-bin/commons-csv-1.8/commons-csv-1.8-sources.jar"/>
+	<classpathentry kind="lib" path="ApacheCommons/commons-csv-1.8-bin/commons-csv-1.8/commons-csv-1.8.jar"/>
+	<classpathentry kind="lib" path="ApacheCommons/commons-lang3-3.10/commons-lang3-3.10-javadoc.jar"/>
+	<classpathentry kind="lib" path="ApacheCommons/commons-lang3-3.10/commons-lang3-3.10-sources.jar"/>
+	<classpathentry kind="lib" path="ApacheCommons/commons-lang3-3.10/commons-lang3-3.10-test-sources.jar"/>
+	<classpathentry kind="lib" path="ApacheCommons/commons-lang3-3.10/commons-lang3-3.10-tests.jar"/>
+	<classpathentry kind="lib" path="ApacheCommons/commons-lang3-3.10/commons-lang3-3.10.jar"/>
+	<classpathentry kind="lib" path="ApacheCommons/json-20190722.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
