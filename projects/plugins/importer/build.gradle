@@ -1,4 +1,4 @@
-
+apply plugin: 'java'
 dependencies {
 	     compile project(':projects:extensions:jpanlib')
 	     compile project(':projects:extensions:joern-fuzzyc')

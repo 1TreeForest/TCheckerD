@@ -1,4 +1,4 @@
-
+apply plugin: 'java'
 task copyToLib3(type: Copy) {
     into "lib"
     from configurations.runtime
